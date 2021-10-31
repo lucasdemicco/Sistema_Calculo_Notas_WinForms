@@ -22,6 +22,14 @@ namespace CalculaNota
 
         }
 
+        void limparDados()
+        {
+            txtNome.Text = string.Empty;
+            txtNota1.Text = string.Empty;
+            txtNota2.Text = string.Empty;
+            txtNota3.Text = string.Empty;
+        }
+
         /// <summary>
         /// Botão que insere as notas do aluno
         /// </summary>
@@ -49,11 +57,21 @@ namespace CalculaNota
             if (media < 60)
             {
                 dgvAlunos.Rows[dgvAlunos.Rows.Count - 1].Cells["MEDIA"].Style.BackColor = Color.Red;
+                dgvAlunos.Rows[dgvAlunos.Rows.Count - 1].Cells["MEDIA"].Style.SelectionBackColor = Color.Red;
             }
             else
             {
                 dgvAlunos.Rows[dgvAlunos.Rows.Count - 1].Cells["MEDIA"].Style.BackColor = Color.Green;
+                dgvAlunos.Rows[dgvAlunos.Rows.Count - 1].Cells["MEDIA"].Style.SelectionBackColor = Color.Green;
             }
+
+            //Método para limapr dados
+            limparDados();
+        }
+
+        private void btnMedia_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

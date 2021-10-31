@@ -137,7 +137,7 @@ namespace CalculaNota
             this.txtNome.Name = "txtNome";
             this.txtNome.PlaceholderText = "Nome do Aluno";
             this.txtNome.Size = new System.Drawing.Size(268, 23);
-            this.txtNome.TabIndex = 4;
+            this.txtNome.TabIndex = 0;
             // 
             // btnAdicionar
             // 
@@ -166,6 +166,7 @@ namespace CalculaNota
             this.btnMedia.TabIndex = 7;
             this.btnMedia.Text = "Média dos Alunos";
             this.btnMedia.UseVisualStyleBackColor = true;
+            this.btnMedia.Click += new System.EventHandler(this.btnMedia_Click);
             // 
             // frmPrincipal
             // 
